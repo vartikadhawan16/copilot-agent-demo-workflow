@@ -18,7 +18,7 @@ jobs:
       # Step 2: Create Issues on Multiple Repositories and assign to copilot
       - name: Create Issues and Assign to Copilot
         env:
-          ASSIGNEE: "copilot"
+          ASSIGNEE: "Copilot"
         run: |
           # Define issue title and body
           ISSUE_TITLE="Sync Docker and Gradle Configurations"
