@@ -23,7 +23,7 @@ jobs:
           ISSUE_BODY=$'Update the repository to: Add Docker-related files and ensure consistency with reference standards.\n\nUpdate Gradle build files and related scripts for alignment with best practices.\n\nRemove manifest and autoscaler manifest files from the project.\n\nReference Repository:https://github.com/vartikadhawan16/copilot-agent-demo-org'
 
           # List of repositories to create issues on
-          REPOS=("vartikadhawan16/copilot-agent-demo-customer" "vartikadhawan16/copilot-agent-demo-product")
+          REPOS=("vartikadhawan16/copilot-agent-demo-user" "vartikadhawan16/copilot-agent-demo-customer" "vartikadhawan16/copilot-agent-demo-product")
 
           # Loop through repositories
           for REPO in "${REPOS[@]}"; do
