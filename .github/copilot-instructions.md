@@ -9,9 +9,6 @@ Execute these steps when an issue is created in this repository requesting:
 **Reference Repository:**  
 `https://github.com/vartikadhawan16/copilot-agent-demo-org`
 
-**Target Repository:**  
-`https://github.com/vartikadhawan16/copilot-agent-demo-user`
-
 ---
 
 ## Detailed Steps and Commands
@@ -110,13 +107,14 @@ gh pr create --title "Sync Docker and Gradle Configurations" \
 
 ***
 
+### 7. Add reviewers
+       Add vartikadhawan16 and vipulmahajan1988 as Reviewer in the PR.
 ## Notes
 
 *   Do NOT validate Docker or Gradle builds.
 *   Maintain original structure of copied files.
 *   Use PAT stored in `GH_PAT` for authentication.
 *   If issue mentions `docker-compose` or `.env`, copy those files as well.
-*   Add Copilot, vartikadhawan16 and vipulmahajan1988 as Reviewer in the PR.
 
 ```
 
