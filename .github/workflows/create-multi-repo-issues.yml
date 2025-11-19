@@ -17,12 +17,10 @@ jobs:
 
       # Step 2: Create Issues on Multiple Repositories and assign to copilot
       - name: Create Issues and Assign to Copilot
-        env:
-          ASSIGNEE: "Copilot"
         run: |
           # Define issue title and body
-          ISSUE_TITLE="Sync Docker and Gradle Configurations"
-          ISSUE_BODY=$'Please update the repository to include Docker-related files and Gradle build updates based on reference standards.\n\nReference Repo: https://github.com/vartikadhawan16/copilot-agent-demo-org\n\nEnsure consistency in Dockerfile, Gradle build files, and related scripts.'
+          ISSUE_TITLE="Update Repository: Add Docker & Gradle Enhancements, Remove Manifests"
+          ISSUE_BODY=$'Update the repository to: Add Docker-related files and ensure consistency with reference standards.\n\nUpdate Gradle build files and related scripts for alignment with best practices.\n\nRemove manifest and autoscaler manifest files from the project.\n\nReference Repository:https://github.com/vartikadhawan16/copilot-agent-demo-org'
 
           # List of repositories to create issues on
           REPOS=("vartikadhawan16/copilot-agent-demo-customer" "vartikadhawan16/copilot-agent-demo-product")
@@ -50,12 +48,4 @@ jobs:
 
             echo "Issue created: $ISSUE_URL"
             ISSUE_NUMBER="${ISSUE_URL##*/}"
-
-            # Try to assign to copilot; if it fails, leave a note
-            if gh issue edit "$ISSUE_NUMBER" --repo "$REPO" --add-assignee "$ASSIGNEE"; then
-              echo "Assigned issue #$ISSUE_NUMBER to $ASSIGNEE on $REPO"
-            else
-              echo "Could not assign to $ASSIGNEE on $REPO. Leaving a comment instead."
-              gh issue comment "$ISSUE_NUMBER" --repo "$REPO" --body "Heads up: Could not auto-assign to @${ASSIGNEE}. Please ensure the user has access to this repository and assign manually."
-            fi
           done
