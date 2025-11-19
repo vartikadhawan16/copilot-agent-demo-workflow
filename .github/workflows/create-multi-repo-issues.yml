@@ -22,10 +22,10 @@ jobs:
         run: |
           # Define issue title and body
           ISSUE_TITLE="Sync Docker and Gradle Configurations"
-          ISSUE_BODY=$'Please update the repository to include Docker-related files and Gradle build updates based on reference standards.\n\nReference Repo: https://github.com/vartikadhawan16/copilot-agent-demo-org\nTarget Repo: This repository\n\nEnsure consistency in Dockerfile, docker-compose, Gradle build files, and related scripts.'
+          ISSUE_BODY=$'Please update the repository to include Docker-related files and Gradle build updates based on reference standards.\n\nReference Repo: https://github.com/vartikadhawan16/copilot-agent-demo-org\n\nEnsure consistency in Dockerfile, Gradle build files, and related scripts.'
 
           # List of repositories to create issues on
-          REPOS=("vartikadhawan16/copilot-agent-demo-user")
+          REPOS=("vartikadhawan16/copilot-agent-demo-customer" "vartikadhawan16/copilot-agent-demo-product")
 
           # Loop through repositories
           for REPO in "${REPOS[@]}"; do
