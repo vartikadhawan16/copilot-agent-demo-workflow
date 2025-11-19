@@ -35,7 +35,7 @@ jobs:
             gh label create "copilot-update" \
               --color "0E8A16" \
               --description "Triggers Copilot automation" \
-              --repo "$REPO" || echo "Label already exists on $REPO"
+              --repo "$REPO" --force || echo "Label already exists on $REPO"
 
             # Create issue without assignment first to avoid hard failures
             ISSUE_URL="$(gh issue create --repo "$REPO" \
